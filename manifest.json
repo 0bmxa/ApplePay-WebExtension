@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "ApplePay Stubs",
+    "version": "1.0",
+
+    "description": "Stubs for the ApplePay API to make websites think the ApplePay APIs are available and show the ApplePay buttons.",
+
+    "icons": {
+        "128": "icons/icon128.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "all_frames": true,
+        "js": ["src/ApplePayStubs.js"],
+        "css": ["src/ApplePayButton.css"]
+    }]
+}
